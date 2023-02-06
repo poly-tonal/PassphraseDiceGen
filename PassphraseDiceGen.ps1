@@ -95,4 +95,5 @@ if ($global:symbol) {
     $passphrase += $symbols | Get-Random
 }
 
-write-host $passphrase
+Write-Host $passphrase
+Read-Host
