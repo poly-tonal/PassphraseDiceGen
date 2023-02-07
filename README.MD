@@ -18,6 +18,7 @@ Each number is associated with a single word which is added to a passphrase incl
     [-case <String>]
     [-saveList <bool>]
     [-useSavedDictionary <string>]
+    [-hyphenated <bool>]
 ```
 - upper case and lower case are selected with `-case upper` and `-case lower`
 - useSavedDictionary cannot be used in conjunction to saveList
@@ -30,8 +31,9 @@ Each number is associated with a single word which is added to a passphrase incl
 - case = "default" (default is sentence case (e.g. ThisIsSentence), upper and lower cases supported)
 - saveList = <span style="color:lightgreen">$false</span> (list of words not saved to device)
 - useSavedDictionary = <span style="color:lightgreen">$null
+- hyphenated = <span style="color:light green">$false
 
 ### Example
-` .\PasswordDiceGen.ps1 -phraseLength 5 -usenumbers $false -case upper -saveList $true `
+` .\PasswordDiceGen.ps1 -phraseLength 5 -usenumbers $false -case upper -saveList $true -hyphenated $true`
 Output: <br>
-`KILOWATTVAGUELY(FRETFULTAPSYAHOO`
+`KILOWATT-VAGUELY(-FRETFUL-TAPS-YAHOO`
