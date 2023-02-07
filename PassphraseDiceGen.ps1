@@ -8,7 +8,8 @@ param(
     [bool]$useSymbols = $true,
     [string]$case = "sentence",
     [bool]$saveList = $false,
-    [string]$useSavedDictionary = $null
+    [string]$useSavedDictionary = $null,
+    [bool]$hyphenated = $false
 )
 
 $global:number = $useNumbers
@@ -81,6 +82,9 @@ for ($x = 0; $x -lt $phraseLength; $x++) {
         }
     }
     #capitalise word
+    if($hyphenated -And $x -gt 0{
+        $passphrase += "-"
+    }
     $passphrase += $word
     #add numbers or symbols
     $passphrase = addSpecial $passphrase
