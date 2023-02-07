@@ -70,7 +70,7 @@ for ($x = 0; $x -lt $phraseLength; $x++) {
         $result += $roll
     }
     #get word from word list
-    $word = $formattedwords.$result
+    $word = $formattedwords[$result]
     switch ($case.ToLower()) {
         "lower" {}
         "upper" {
