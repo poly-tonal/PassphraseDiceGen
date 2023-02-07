@@ -24,9 +24,7 @@ $wordlist = $wordlist -split '\s+'
 #format words to number: word as object
 $formattedwords = [System.Collections.Hashtable]@{}
 for ($word = 0; $word -lt $wordlist.length - 1; $word += 2) {
-    # $format = [PSObject]@{$wordlist[$word] = $wordlist[$word + 1] }
 
-    # $formattedwords.Add($format)
     $formattedwords[$wordlist[$word]] = $wordlist[$word + 1]
 }
 if ($saveList) {
@@ -63,7 +61,6 @@ $passphrase = $null
 
 for ($x = 0; $x -lt $phraseLength; $x++) {
     
-    #TODO get dicerolls to make value 11111-66666
     $result = $null
     for ($i = 0; $i -lt 5; $i++) {
         $roll = "1", "2", "3", "4", "5", "6" | Get-Random
